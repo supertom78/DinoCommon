@@ -1,0 +1,24 @@
+image: docker:stable
+stages:
+  - build_image
+  - deploy
+
+build-image:
+  image: $MAVEN_IMAGE
+  stage: build_image
+  services:
+    - docker:dind
+  script:
+    - mvn spring-boot:build-image -DskipTests
+  tags:
+    - build-xl
+
+deploy:
+  stage: deploy
+  tags:
+    - build-xl
+  script: 
+    - echo "Maven deploy started"
+
+
+

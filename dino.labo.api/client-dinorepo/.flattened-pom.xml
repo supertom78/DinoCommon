@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>fr.liksi</groupId>
+    <artifactId>dinolabo-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>fr.liksi</groupId>
+  <artifactId>dinolabo_client-dinorepo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>DinoLabo::Client dinorepo</name>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+  <properties>
+    <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.openapitools</groupId>
+        <artifactId>openapi-generator-maven-plugin</artifactId>
+        <version>${openapi-generator-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>generate sources for Client dinorepo</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <inputSpec>${project.basedir}/swagger/dinorepo.json</inputSpec>
+              <generatorName>java</generatorName>
+              <configOptions>
+                <library>resttemplate</library>
+                <dateLibrary>java8</dateLibrary>
+                <implicitHeaders>true</implicitHeaders>
+                <serializableModel>true</serializableModel>
+                <useJakartaEe>true</useJakartaEe>
+              </configOptions>
+              <apiPackage>fr.liksi.dinorepo.api</apiPackage>
+              <modelPackage>fr.liksi.dinorepo.bean</modelPackage>
+              <generateModelDocumentation>false</generateModelDocumentation>
+              <generateModelTests>false</generateModelTests>
+              <generateApiTests>false</generateApiTests>
+              <generateApiDocumentation>false</generateApiDocumentation>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

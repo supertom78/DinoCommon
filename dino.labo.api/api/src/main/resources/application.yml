@@ -1,0 +1,33 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: dino.labo.api
+  jpa:
+    database: postgresql
+  datasource:
+    url: jdbc:postgresql://localhost:5433/dinolabo
+    username: user
+    password: password
+  docker:
+    compose:
+      enabled: true
+      file: docker-compose.yml
+      skip:
+        in-tests: true
+  flyway:
+    clean-disabled: false
+    clean-on-validation-error: true
+  springdoc:
+    enable-native-support: true
+  threads:
+    virtual:
+      enabled: true
+
+api:
+  dinorepo:
+    scheme: http
+    host: localhost
+    port: 8080
+

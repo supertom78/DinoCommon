@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: dino.gateway.api
+  springdoc:
+    enable-native-support: true
+  threads:
+    virtual:
+      enabled: true
+
+api:
+  dinolabo:
+    scheme: http
+    host: localhost
+    port: 8081
+  dinorepo:
+    scheme: http
+    host: localhost
+    port: 8080
+
+

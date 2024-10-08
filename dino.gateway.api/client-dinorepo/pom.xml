@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+
+	<artifactId>client-dinorepo</artifactId>
+    <name>DinoGateway::Client dinorepo</name>
+    <version>${project.parent.version}</version>
+	
+	<parent>
+        <groupId>fr.liksi</groupId>
+        <artifactId>dinogateway-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>${openapi-generator-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate sources for Client dinorepo</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/swagger/dinorepo.json</inputSpec>
+                            <generatorName>java</generatorName>
+                            <configOptions>
+                                <library>resttemplate</library>
+                                <dateLibrary>java8</dateLibrary>
+                                <implicitHeaders>true</implicitHeaders>
+                                <serializableModel>true</serializableModel>
+                                <useJakartaEe>true</useJakartaEe>
+                            </configOptions>
+                            <apiPackage>fr.liksi.dinorepo.api</apiPackage>
+                            <modelPackage>fr.liksi.dinorepo.bean</modelPackage>
+                            <generateModelDocumentation>false</generateModelDocumentation>
+                            <generateModelTests>false</generateModelTests>
+                            <generateApiTests>false</generateApiTests>
+                            <generateApiDocumentation>false</generateApiDocumentation>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
