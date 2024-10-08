@@ -1,0 +1,27 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: gitlab.llmagent.api
+
+langchain4j:
+#    apikey: ${OPENAI_API_KEY}
+#    modelName: gpt-3.5-turbo
+    apikey: ${GOOGLE_API_KEY}
+    modelName: gemini-1.5-pro
+    temperature: 0.0
+    timeout: PT60S
+    logRequests: true
+    logResponses: true
+
+gitlab:
+  ciDeployUser: ${GITLAB_CI_DEPLOY_USER}
+  ciDeployPassword: ${GITLAB_CI_DEPLOY_PASSWORD}
+
+logging:
+  level:
+    fr.liksi: debug
+    dev:
+      langchain4j: debug
+      openai4j: debug
