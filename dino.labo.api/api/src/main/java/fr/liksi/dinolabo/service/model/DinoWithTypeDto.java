@@ -1,8 +1,8 @@
 package fr.liksi.dinolabo.service.model;
 
-import fr.liksi.dinolabo.configuration.headers.model.Parc;
 import fr.liksi.dinolabo.repository.model.Status;
 import fr.liksi.dinorepo.bean.DinoTypeRecordDto;
+import fr.liksi.utils.model.Parc;
 
 import java.util.UUID;
 

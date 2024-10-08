@@ -1,6 +1,6 @@
 package fr.liksi.dinogateway.configuration;
 
-import fr.liksi.dinogateway.configuration.security.AccessControlHeaderManager;
+import fr.liksi.starters.security.AccessControlHeaderManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authorization.AuthorizationManager;

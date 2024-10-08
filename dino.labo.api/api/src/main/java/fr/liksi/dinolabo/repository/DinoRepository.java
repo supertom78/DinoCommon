@@ -2,7 +2,7 @@ package fr.liksi.dinolabo.repository;
 
 import fr.liksi.dinolabo.repository.model.Dino;
 import fr.liksi.dinolabo.repository.model.DinoRecordDto;
-import fr.liksi.dinolabo.configuration.headers.model.Parc;
+import fr.liksi.utils.model.Parc;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

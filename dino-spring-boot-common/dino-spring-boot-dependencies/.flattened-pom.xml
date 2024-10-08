@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>fr.liksi</groupId>
+    <artifactId>dino-spring-boot-common</artifactId>
+    <version>local-SNAPSHOT</version>
+  </parent>
+  <groupId>fr.liksi</groupId>
+  <artifactId>dino-spring-boot-dependencies</artifactId>
+  <version>local-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <description>Dino Spring Boot dependencies</description>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+  <properties>
+    <springdoc-openapi.version>2.5.0</springdoc-openapi.version>
+    <revision>local-SNAPSHOT</revision>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>fr.liksi</groupId>
+        <artifactId>dino-starter</artifactId>
+        <version>local-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>fr.liksi</groupId>
+        <artifactId>dino-starter-rest-api</artifactId>
+        <version>local-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>fr.liksi</groupId>
+        <artifactId>dino-starter-spring-boot-security</artifactId>
+        <version>local-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>fr.liksi</groupId>
+        <artifactId>dino-starter-test</artifactId>
+        <version>local-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+        <version>${springdoc-openapi.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>

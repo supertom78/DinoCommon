@@ -1,0 +1,9 @@
+spring:
+  mvc:
+    problemdetails:
+      enabled: true
+  springdoc:
+    enable-native-support: true
+  threads:
+    virtual:
+      enabled: true

@@ -1,6 +1,7 @@
 package fr.liksi.dinorepo.repository.model;
 
-import fr.liksi.dinorepo.configuration.headers.model.Parc;
+
+import fr.liksi.utils.model.Parc;
 
 import java.util.UUID;
 

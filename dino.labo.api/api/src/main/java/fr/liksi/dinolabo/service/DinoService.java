@@ -1,11 +1,11 @@
 package fr.liksi.dinolabo.service;
 
-import fr.liksi.dinolabo.configuration.headers.HeadersHolder;
 import fr.liksi.dinolabo.connector.DinorepoConnector;
 import fr.liksi.dinolabo.repository.DinoRepository;
 import fr.liksi.dinolabo.repository.model.Dino;
 import fr.liksi.dinolabo.repository.model.DinoRecordDto;
 import fr.liksi.dinolabo.service.model.DinoWithTypeDto;
+import fr.liksi.starters.headers.HeadersHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

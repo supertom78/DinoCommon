@@ -1,11 +1,11 @@
 package fr.liksi.dinolabo.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fr.liksi.dinolabo.configuration.headers.model.Parc;
 import fr.liksi.dinolabo.repository.model.DinoRecordDto;
 import fr.liksi.dinolabo.repository.model.Status;
 import fr.liksi.dinolabo.service.DinoService;
 import fr.liksi.dinolabo.web.DinoController;
+import fr.liksi.utils.model.Parc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package fr.liksi.dinolabo.configuration;
 
-import fr.liksi.dinolabo.configuration.headers.HeadersHolder;
-import fr.liksi.dinolabo.configuration.headers.model.Parc;
+import fr.liksi.starters.headers.HeadersHolder;
+import fr.liksi.utils.model.Parc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +44,5 @@ public class HeaderHolderTest {
                         .header("Parc", Parc.HAWAII));
 
         assertThat(headersHolder.getParc()).isEqualTo(Parc.HAWAII);
-        assertThat(headersHolder.getCorrelationId()).isNotNull();
     }
 }

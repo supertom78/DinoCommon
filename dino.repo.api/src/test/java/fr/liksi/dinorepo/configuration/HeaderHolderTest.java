@@ -1,8 +1,8 @@
 package fr.liksi.dinorepo.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fr.liksi.dinorepo.configuration.headers.HeadersHolder;
-import fr.liksi.dinorepo.configuration.headers.model.Parc;
+import fr.liksi.starters.headers.HeadersHolder;
+import fr.liksi.utils.model.Parc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

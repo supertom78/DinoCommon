@@ -1,9 +1,9 @@
 package fr.liksi.dinolabo.configuration.ext;
 
 import fr.liksi.dinolabo.configuration.ext.model.ApiProperties;
-import fr.liksi.dinolabo.configuration.headers.HeadersClientInterceptor;
 import fr.liksi.dinorepo.ApiClient;
 import fr.liksi.dinorepo.api.DinoControllerApi;
+import fr.liksi.starters.headers.HeadersClientInterceptor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

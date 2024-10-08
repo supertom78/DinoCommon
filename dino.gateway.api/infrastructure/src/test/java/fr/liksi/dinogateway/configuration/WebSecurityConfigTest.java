@@ -1,8 +1,8 @@
 package fr.liksi.dinogateway.configuration;
 
 import fr.liksi.dinogateway.api.CreateKpis;
-import fr.liksi.dinogateway.configuration.headers.model.Parc;
 import fr.liksi.dinogateway.web.KPIController;
+import fr.liksi.utils.model.Parc;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
