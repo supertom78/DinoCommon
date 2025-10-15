@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dino
+    username: user
+    password: password
+  jpa:
+    database: postgresql
+
+  flyway:
+    enabled: true
+    clean-disabled: false
+    create-schemas: true
+    locations: classpath:db/migration
+
+  docker:
+    compose:
+      enabled: true
+      file: "docker-compose.local.yml"
+      skip:
+        in-tests: true
+  springdoc:
+    api-docs:
+      enabled: true
+      path: /swagger-ui
+    enable-native-support: true
+  threads:
+    virtual:
+      enabled: true
+
+
